@@ -170,7 +170,17 @@
 	
 	<body>
 		<div id="head">
-			<p >音视频BoKe系统</p>
+			<p >深入学习系统</p>
+			<div id="img">
+				<img src="imgs/ljh.jpg"/ alt="" id="circle">
+				<img src="imgs/msx.jpg">
+				<img src="imgs/yfy.jpg">
+				<img src="imgs/llf.jpg">
+				<img src="imgs/linj.jpg">
+				<img src="imgs/hx.jpg"><br>
+				指导老师:李健宏 组长:梅松祥&nbsp;&nbsp;&nbsp;&nbsp;组员:袁飞宇,黎龙飞,林家豪,华勋
+			</div>
+			<div id="taijitu">
 			<div class="taiji">
 			        <div class="tj white"></div>
 			        <div class="tj black"></div>
@@ -178,18 +188,10 @@
 			            <div class="small s-b"></div>
 			        </div>
 			        <div class="round r-b">
-			            <div class="small s-w"></div>
-			    </div>
+			        <div class="small s-w"></div>
+			</div>
+			</div>
 			
-		</div>
-		<div id="img">
-			<img src="imgs/ljh.jpg"/ alt="" id="circle">
-			<img src="imgs/msx.jpg">
-			<img src="imgs/yfy.jpg">
-			<img src="imgs/llf.jpg">
-			<img src="imgs/linj.jpg">
-			<img src="imgs/hx.jpg"><br>
-			指导老师:李建宏 组长:梅松祥&nbsp;&nbsp;&nbsp;&nbsp;组员:袁飞宇,黎龙飞,林家豪,华勋
 		</div>
 		<!-- 右侧遮挡 -->
 		<div id="logo">
@@ -262,13 +264,14 @@
 		model.ui.po=document.getElementById("PO");
 		model.ui.ds=document.getElementById("DS");
 		model.ui.buttonS=document.getElementById("buttonS");
+		model.ui.taiji=document.getElementById("taijitu");
 		model.i=0; /* 用于计算视频的演进位置,即第几个视频 */
 		model.j=0; /* 用于记录此为第几个音频的索引 */
 		model.flag=true /* 用于标记音频和视频的交换 */
-
+        var vedioWidth = document.body.clientWidth;
 
 		model.ui.video.style.width = document.body.clientWidth + 'px';
-		var vedioWidth = document.body.clientWidth;
+		
 		/* 
 		videoNO.value=i; 用于刷新视频的显示编号
 		 */
@@ -465,6 +468,7 @@
 				model.ui.audio.style.display = "block"; 
 				model.ui.menu.style.display="block";
 				model.ui.buttonS.style.display = "block";
+				model.ui.taiji.style.display = "none";
 				model.ui.video.style.display = "none";
 				model.ui.logo.style.display = "none";
 				model.ui.currentTimeV.style.display = "none";
@@ -476,6 +480,7 @@
 				model.ui.audio.style.display = "none";
 				model.ui.menu.style.display="none";
 				model.ui.buttonS.style.display = "none";
+				model.ui.taiji.style.display = "none";
 				model.ui.video.style.display = "block";
 				model.ui.logo.style.display = "block";
 				model.ui.currentTimeV.style.display = "block";
